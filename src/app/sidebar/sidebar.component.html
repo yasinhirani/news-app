@@ -1,0 +1,17 @@
+<aside class="border-right h-100">
+    <header class="bg-primary p-2 d-flex justify-content-between">
+        <h2 class="text-white pl-4 mb-0">ND</h2>
+        <label for="hamburger" class="mb-0 text-white d-inline d-md-none"><span class="fa fa-times"></span></label>
+    </header>
+    <ul class="nav flex-column mt-4">
+        <li class="nav-item px-1 py-1 text-capitalize" (click)="getNews(category.name)" *ngFor="let category of categories">
+            <a href="#" (click)="getCategory(category.name)" class="nav-link py-2 px-3"><span class="{{category.icon}} font-icon"></span>{{category.name}}</a>
+        </li>
+        <!-- <li class="nav-item px-1 py-1"><a href="#" class="nav-link py-2 px-3"><span class="fa fa-futbol-o font-icon"></span>Sports</a></li>
+        <li class="nav-item px-1 py-1"><a href="#" class="nav-link py-2 px-3"><span class="fa fa-film font-icon"></span>Entertainment</a></li>
+        <li class="nav-item px-1 py-1"><a href="#" class="nav-link py-2 px-3"><span class="fa fa-television font-icon"></span>Technology</a></li>
+        <li class="nav-item px-1 py-1"><a href="#" class="nav-link py-2 px-3"><span class="fa fa-medkit font-icon"></span>Health</a></li>
+        <li class="nav-item px-1 py-1"><a href="#" class="nav-link py-2 px-3"><span class="fa fa-briefcase font-icon"></span>Science</a></li> -->
+    </ul>
+</aside>
+

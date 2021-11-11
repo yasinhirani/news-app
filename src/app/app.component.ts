@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'news-app';
+  news: any;
+  name: String = "business";
+  constructor(){ }
+
+    newsResponse(e: any){
+      this.news = e;
+    console.log(e);
+  }
+  categoryname(e: any){
+    // console.log(e);
+    this.name = e;
+  }
 }

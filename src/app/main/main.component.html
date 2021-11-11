@@ -1,0 +1,31 @@
+<ng-template #elseblock>
+    <div class="spinner w-100 h-100">
+        <div class="loading"></div>
+    </div>
+</ng-template>
+<main class="h-100 overflow-hidden d-flex flex-column">
+    <!-- <input type="checkbox" name="hamburger" id="hamburger"> -->
+    <header class="bg-primary d-flex align-items-center">
+        <label for="hamburger" class="mb-0"><span class="fa fa-bars text-white px-3"></span></label>
+        <h2 class="mb-0 py-2 px-2 text-white">News Dhamaka</h2>
+    </header>
+    <div class="flex-grow-1 p-2 p-md-3 overflow-auto bg-secondary" *ngIf="setNews else elseblock">
+        <h2 class="mb-0 text-capitalize" *ngIf="setNews">{{setName}}</h2>
+        <div class="row no-gutters">
+            <div class="col-12" *ngFor="let news of setNews">
+                <div class="bg-white p-2 p-md-3 my-3 d-flex flex-column flex-md-row align-items-center">
+                    <figure class="mb-3 mb-md-0 newsImage">
+                        <img src="{{news.urlToImage}}" alt="" loading="lazy">
+                    </figure>
+                    <div class="content ml-0 ml-md-4">
+                        <a href={{news.url}} target="_blank" class="mb-3 font-xxl font-weight-medium">{{news.title}}</a>
+                        <p class="mb-3">{{news.description}}</p>
+                        <p class="mb-0 d-inline-block" [ngClass]="news.author ? 'pr-3' : 'pr-0'">{{news.author}}</p>
+                        <p class="mb-0 d-inline-block" *ngIf="news && news.author">|</p>
+                        <p class="mb-0 d-inline-block" [ngClass]="news.author ? 'pl-3' : 'pl-0'">{{news.publishedAt}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
