@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  // Variables
   title = 'news-app';
   news: any;
   name: String = "business";
@@ -13,7 +14,7 @@ export class AppComponent {
 
     newsResponse(e: any){
       this.news = e;
-    console.log(e);
+    // console.log(e);
   }
   categoryname(e: any){
     // console.log(e);

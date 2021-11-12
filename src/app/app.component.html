@@ -1,6 +1,9 @@
+<!-- main wrapper -->
 <div class="d-flex w-100 h-100 overflow-hidden position-relative">
   <input type="checkbox" name="hamburger" id="hamburger">
   <label for="hamburger" class="mb-0 backdrop"></label>
+  <!-- sidebar -->
   <app-sidebar class="sidebar h-100" (newsResponse)="newsResponse($event)" (categoryname)="categoryname($event)"></app-sidebar>
+  <!-- main-section -->
   <app-main class="flex-grow-1 h-100" [setNews]="news" [setName]="name"></app-main>
 </div>
