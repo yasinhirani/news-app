@@ -19,8 +19,8 @@
                         <img src="{{news.image}}" alt="" loading="lazy">
                     </figure>
                     <div class="content ml-0 ml-md-4">
-                        <a href={{news.url}} target="_blank" class="font-xl font-weight-medium">{{news.content}}</a>
-                        <p class="my-4">{{news.description}}</p>
+                        <a href={{news.url}} target="_blank" class="font-xl font-weight-medium">{{news.description}}</a>
+                        <p class="my-4 news-content">{{news.content}}</p>
                         <p class="mb-0 d-inline-block" [ngClass]="news.source.name ? 'pr-3' : 'pr-0'">{{news.source.name}}</p>
                         <p class="mb-0 d-inline-block" *ngIf="news && news.source.name">|</p>
                         <p class="mb-0 d-inline-block" [ngClass]="news.source.name ? 'pl-3' : 'pl-0'">{{news.publishedAt}}</p>
