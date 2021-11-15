@@ -10,6 +10,6 @@ export class NewsService {
   constructor(private http: HttpClient) { }
 // Api service
   getNewsService(catagory: any){
-    return this.http.get(`https://newsapi.org/v2/top-headlines?country=in&category=${catagory}&apiKey=6dd98cb4dec143c59c6b2ea329004c53`);
+    return this.http.get(`https://gnews.io/api/v4/top-headlines?token=f3b031924bfe70721e2cea85655c2f96&topic=${catagory}&country=in`);
   }
 }

@@ -1,9 +1,6 @@
 .newsImage{
-    width: 200px;
-    @include media-breakpoint-down(md){
-        width: 260px;
-        height: auto;
-    }
+    max-width: 300px;
+    height: auto;
     img{
         width: 100%;
     }
