@@ -64,7 +64,6 @@ export class SidebarComponent implements OnInit {
     this.newsService.getNewsService(category).subscribe(data => {
       this.newsArray = data;
       this.setNews = this.newsArray.data;
-      console.log(this.setNews);
       this.newsResponse.emit(this.setNews);
     })
   }
