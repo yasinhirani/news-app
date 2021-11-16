@@ -16,14 +16,14 @@
             <div class="col-12" *ngFor="let news of setNews">
                 <div class="bg-white p-2 p-md-3 my-3 d-flex flex-column flex-md-row align-items-center">
                     <figure class="mb-3 mb-md-0 newsImage">
-                        <img src="{{news.image}}" alt="" loading="lazy">
+                        <img src="{{news.imageUrl}}" alt="" loading="lazy">
                     </figure>
                     <div class="content ml-0 ml-md-4">
-                        <a href={{news.url}} target="_blank" class="font-xl font-weight-medium">{{news.description}}</a>
+                        <a href={{news.url}} target="_blank" class="font-xl font-weight-medium">{{news.title}}</a>
                         <p class="my-4 news-content">{{news.content}}</p>
-                        <p class="mb-0 d-inline-block" [ngClass]="news.source.name ? 'pr-3' : 'pr-0'">{{news.source.name}}</p>
-                        <p class="mb-0 d-inline-block" *ngIf="news && news.source.name">|</p>
-                        <p class="mb-0 d-inline-block" [ngClass]="news.source.name ? 'pl-3' : 'pl-0'">{{news.publishedAt}}</p>
+                        <p class="mb-0 d-inline-block" [ngClass]="news.author ? 'pr-3' : 'pr-0'">{{news.author}}</p>
+                        <p class="mb-0 d-inline-block" *ngIf="news && news.author">|</p>
+                        <p class="mb-0 d-inline-block" [ngClass]="news.author ? 'pl-3' : 'pl-0'">{{news.date}}</p>
                     </div>
                 </div>
             </div>

@@ -9,7 +9,7 @@ export class AppComponent {
   // Variables
   title = 'news-app';
   news: any;
-  name: String = "business";
+  name: String = "all";
   constructor(){ }
 
     newsResponse(e: any){

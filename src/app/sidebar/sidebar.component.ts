@@ -12,12 +12,20 @@ export class SidebarComponent implements OnInit {
   @Output() categoryname:EventEmitter<any> = new EventEmitter();
   newsArray: any;
   setNews: any;
-  categoryName: String =  "business";
+  categoryName: any;
   constructor(private newsService: NewsService) { 
-    this.getNews("business");
+    this.getNews("all");
   }
 
   categories = [
+    {
+      name:"all",
+      icon: "fa fa-bookmark"
+    },
+    {
+      name:"national",
+      icon: "fa fa-flag-o"
+    },
     {
       name:"business",
       icon: "fa fa-briefcase"
@@ -40,15 +48,23 @@ export class SidebarComponent implements OnInit {
     },
     {
       name:"science",
-      icon: "fa fa-briefcase"
+      icon: "fa fa-space-shuttle"
+    },
+    {
+      name:"world",
+      icon: "fa fa-globe"
+    },
+    {
+      name:"politics",
+      icon: "fa fa-users"
     }
   ];
 
   getNews(category: any){
     this.newsService.getNewsService(category).subscribe(data => {
       this.newsArray = data;
-      this.setNews = this.newsArray.articles;
-      // console.log(this.setNews);
+      this.setNews = this.newsArray.data;
+      console.log(this.setNews);
       this.newsResponse.emit(this.setNews);
     })
   }
